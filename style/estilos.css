@@ -1,0 +1,218 @@
+
+/*Se utilzo la funte de Ubuntu, la cual es libre y esta disponible en el repositorio de GoogleFonts*/
+
+/*Se crea un nombre para poder llamar la fuente de Ubuntu*/
+@font-face{
+	font-family: ZEROHOUR;
+	src: url(../fuente/ZEROHOUR.TTF);
+}
+
+/*---------------------*/
+/*Diseño para los titulos*/
+/*---------------------*/
+
+h1{
+	display: block;
+	font-family: "ZEROHOUR";
+	text-align: center;
+	padding: 20px;
+	font-size:250%;  
+    color: #000001; //color del texto    
+}
+
+.titulo{
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width:1200px ) {
+	font-size:200%;  
+}
+
+/*---------------------*/
+/*Diseño para el menu*/
+/*---------------------*/
+
+/* borra los margenes que pone el navegador por defecto*/
+* {
+	margin:0;
+	padding:0;
+}
+ 
+/* para que el header ocupe todo el ancho de la pagina*/
+header {
+	width:100%;
+}
+
+/* cambia el color del menu y la ubicacion */
+header nav {
+	width: 85%;
+	margin:0px auto;
+	background:#000000;
+}
+
+/*oculta el div del menu que es el que se va a desplegar*/
+.menu_bar {
+	display:none;
+}
+ 
+header nav ul {
+	overflow:hidden; /*para que no se amontone el menu*/
+	list-style:none; /*se quitan las viñetas del menu*/
+}
+
+/* se va a poner cada elemento del menu en fila*/
+header nav ul li {
+	float:left;
+}
+ 
+header nav ul li a {
+	color:#FFFFFF;
+	padding:10px 35px 10px 35px; /*para cada elemento del menu */
+	display:block; /*para poder modificar el paddig arriba y abajo */
+	text-decoration: none; 
+	font-family: "ZEROHOUR";    
+}
+ 
+/*para separar los iconos del menu*/
+header nav ul li span {
+	margin-right:10px;
+}
+
+/*para modificar los iconos en general*/
+.iconos{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+ 
+/*al pasar el mouse cambia de color el href*/
+header nav ul li a:hover {
+	background: #345e36;
+	border: solid;
+	color:#FFFFFF;
+}
+
+/*
+Diseño del menu adaptado para dispositivos pequeños
+*/
+
+@media screen and (max-width:1200px ) {
+
+	header nav {
+		width:50%; /*que tanto se va a desplegar el menu*/
+		height:473px;
+		left:-100%; /*para que se ooculte totalmente el menu*/
+		margin:0px;
+		position: fixed;
+		z-index: 100; /* para que el menu siempre quede encima de todo */
+	}
+ 
+	header nav ul li {
+		display:block; /*va a tomar todo lo que pueda de ancho*/
+		float:none;
+		border-bottom:1px solid rgba(255,255,255, .3); /*pone lineas entre los items*/
+	}
+ 
+	.menu_bar {
+		display:block; /*permite ver boton de menu nuevamente*/
+		width:100%;
+		background:#ccc;
+		font-family: "ZEROHOUR";
+		z-index: 100; /* para que el menu siempre quede encima de todo */
+	}
+ 
+ 	/*hace modificaciones al boton menu*/
+	.menu_bar .bt-menu {
+		display:block; /*para que en su totalidad sea un boton*/
+		padding:20px;
+		background:#000000;
+		color:#fff; /*bolor de texto*/
+		text-decoration:none;
+		font-weight: bold; /*fuente en negrita*/
+		font-size:25px;
+		/*Ponerle borde al boton menu*/
+		-webkit-box-sizing:border-box; 
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+ 
+	.menu_bar span {
+		font-size: 30px; /*tamano del icono*/
+		float:right; /*mandar el icono del menu a la derecha*/
+	}
+
+}
+
+/*---------------------*/
+/*Diseño para el menu fijo con scroll*/
+/*---------------------*/
+
+@media screen and (min-width:1200px ) {
+
+	ul#menu {
+	    background: #000000; /*El menu es de color negro*/ 
+	}
+	 
+	.menu-fijo {
+	    position:fixed;
+	    top: 0;
+	    width: 85%;
+	    display: block;
+	    padding: 0px; /*para cada elemento del menu */
+	    z-index: 100;  /*para que el menu siempre este encima de todo*/
+	}
+
+}
+
+/*---------------------*/
+/*Diseño para el cuerpo*/
+/*---------------------*/
+
+/*parrafos dentro de un cuadrado verde, con la fuente de ZEROHOUR*/
+.parrafo {
+	background-color: #345e36;
+	padding: 20px;
+	margin: 20px 100px 20px 100px;
+	border: solid;
+	border-spacing: inherit;
+	font-family: "ZEROHOUR";
+}
+
+/*parrafos dentro de un cuadrado blanco, con la fuente de ZEROHOUR y todo el texto centrado*/
+.parrafo3 {
+	background-color: white;
+	padding: 20px;
+	margin: 20px 100px 20px 100px;
+	border: solid;
+	border-spacing: inherit;
+	font-family: "ZEROHOUR";
+	text-align: center;
+}
+
+/*El tamaño del padding del texto se midifca cuando llega a 1200px*/
+@media screen and (max-width:1200px ) {
+	.parrafo{
+		margin: 20px 50px 20px 50px;
+	}
+	.parrafo3{
+		margin: 20px 50px 20px 50px;
+	}
+}
+
+/*El tamaño del padding del texto se vuelve a modificar cuando llega a 480px*/
+@media screen and (max-width:480px ) {
+	.parrafo{
+		margin: 10px 10px 10px 10px;
+	}
+	.parrafo3{
+		margin: 10px 10px 10px 10px;
+	}
+}
+
+/*---------------------*/
+/*Diseño para los links*/
+/*---------------------*/
+
+.enlace{
+	color: #FFFFFF;
+	text-decoration:none;
+}

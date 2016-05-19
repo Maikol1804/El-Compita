@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<!-- La pagina intenta resumir las diferentes generos musicales y hace resumen de los artistas mas reconocidos para cada genero-->
+	<head>
+		<!-- Titulo en la pestana de la pagina-->
+		<title>El Compita</title>
+		<!-- Los diferentes atributos del meta hacen que el buscador encuentre mas facil la pagina, y encuentra las dimensiones del dispositivo -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="description" content="Musica universal">
+		<meta name="keywords" content="Musica, Rock, Pop, Punk, Reggae, Clasica, Artistas">
+		<meta name="author" content="Maikol Bonilla">
+		<!-- Llama a los estilos css personalizados -->
+		<link rel="stylesheet" href="style/estilos.css" text="type/css"/>
+		<link rel="stylesheet" href="iconos/iconos.css" text="type/css"/>
+
+	</head>
+	<body>
+
+
+		<header>
+			<!-- Se crea un div para que lleve el boton del menu y que se le puedan aplicar estilos-->
+			<div class="menu_bar">
+				<!-- Se crea el boton MENU, el cual desplegara el menu es dispositivos con baja resolucion-->
+				<a href="#" class="bt-menu"><span class="icon-menu"></span>Menu</a>
+			</div>
+
+			<nav>
+				<!-- Se crea una lista menu, que va a llevar el menu principal de la pagina -->
+				<ul id="menu">
+				<!-- El index es la pagina princial-->
+				<li><a href="index.html"><span class="icon-home"></span>Historia</a></li>
+				<li><a href="instrucciones.html">Instrucciones</a></li>
+				<li><a href="elCompita.html">Juego</a></li>
+				<li><a href="creditos.html">Creditos</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="parrafo3">
+			<table width="100%" border="1" bordercolor="#FFFFFF">
+				<tr>
+					<td>
+						<img class="foto" src="images/foto.png" alt="Maikol Bonilla" style="width: 150px; height: 150px; padding: 0px 0px 0px 100px;">						
+					</td>
+					<td>
+						<div>Universidad Nacional de Colombia</div>
+						<div>Ingenieria de Sistemas y Computacion</div>
+						<div>Maikol Bonilla Gil</div>
+						<div>mabonillagi@unal.edu.co</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+
+		<section class="parrafo">
+			<h2 class="titulo">Bibliografía</h2>
+			<!-- Se creo una lista para que poner cada link de la bibliografia-->
+			<nav>
+			<!-- Cada link se reedireccina en una pestana diferente -->
+			<lu>
+				<!-- Bibliografia de la informacion de las paginas-->
+				<li>
+					<a class="enlace" href="https://helpx.adobe.com/animate.html" target="_blank">https://helpx.adobe.com/animate.html</a>	
+				</li>
+				<li>
+					<a class="enlace" href="http://www.spriters-resource.com/" target="_blank">http://www.spriters-resource.com/</a>
+				</li>
+				<li>
+					<a class="enlace" href="http://www.sounds-resource.com/" target="_blank">http://www.sounds-resource.com/</a>
+				</li>
+				<li>
+					<a class="enlace" href="https://www.youtube.com/watch?v=-9Ll0A3hp34" target="_blank">https://www.youtube.com/watch?v=-9Ll0A3hp34</a>
+				</li>
+				<li>
+					<a class="enlace" href="https://goo.gl/FJ6A2T" target="_blank">https://goo.gl/FJ6A2T</a>
+				</li>
+				<li>
+					<a class="enlace" href="http://goo.gl/gWvivF" target="_blank">http://goo.gl/gWvivF/</a>
+				</li>
+				<li>
+					<a class="enlace" href="http://goo.gl/R1D4Wv" target="_blank">http://goo.gl/R1D4Wv</a>
+				</li>
+				<!-- Bibliografia de paginas de ayuda-->
+				<li>
+					<a class="enlace" href="https://icomoon.io/" target="_blank">https://icomoon.io/</a>
+				</li>
+			</lu>
+			</nav>
+		</section>
+
+		<!-- Llama el javaScript que anima el menu-->
+		<script type="text/javascript" src="js/jquery-2.2.1.min.js"></script> 
+		<script type="text/javascript" src="js/menu.js"></script>
+	</body>
+</html>

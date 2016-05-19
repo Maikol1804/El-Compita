@@ -1,0 +1,93 @@
+<!--
+	NOTES:
+	1. All tokens are represented by '$' sign in the template.
+	2. You can write your code only wherever mentioned.
+	3. All occurrences of existing tokens will be replaced by their appropriate values.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>El Compita</title>
+<!-- write your code here -->
+
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="description" content="El compita">
+<meta name="keywords" content="UNAL">
+<meta name="author" content="Maikol Bonilla">
+<!-- Llama a los estilos css personalizados -->
+<link rel="stylesheet" href="style/estilos.css" text="type/css"/>
+<link rel="stylesheet" href="iconos/iconos.css" text="type/css"/>
+
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src="elCompita.js?1463508099346"></script>
+<script>
+var canvas, stage, exportRoot;
+function init() {
+	// --- write your JS code here ---
+	
+	canvas = document.getElementById("canvas");
+	images = images||{};
+
+	var loader = new createjs.LoadQueue(false);
+	loader.installPlugin(createjs.Sound);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(lib.properties.manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete(evt) {
+	exportRoot = new lib.elCompita();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+
+
+function playSound(id, loop) {
+	return createjs.Sound.play(id, createjs.Sound.INTERRUPT_EARLY, 0, 0, loop);
+}
+</script>
+
+<!-- write your code here -->
+
+</head>
+<body onload="init();" style="background-color:#D4D4D4;">
+
+	<header>
+
+		<!-- Se crea un div para que lleve el boton del menu y que se le puedan aplicar estilos-->
+		<div class="menu_bar">
+			<!-- Se crea el boton MENU, el cual desplegara el menu es dispositivos con baja resolucion-->
+			<a href="#" class="bt-menu"><span class="icon-menu"></span>Menu</a>
+		</div>
+
+		<nav>
+			<!-- Se crea una lista menu, que va a llevar el menu principal de la pagina -->
+			<ul id="menu">
+				<!-- El index es la pagina princial-->
+				<li><a href="index.html"><span class="icon-home"></span>Historia</a></li>
+				<li><a href="instrucciones.html">Instrucciones</a></li>
+				<li><a href="elCompita.html">Juego</a></li>
+				<li><a href="creditos.html">Creditos</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<canvas id="canvas" width="1314" height="592" style="background-color:#FFFFFF; padding: 0;margin: auto; display: block;"></canvas>
+
+	<!-- Llama el javaScript que anima el menu-->
+	<script type="text/javascript" src="js/jquery-2.2.1.min.js"></script> 
+	<script type="text/javascript" src="js/menu.js"></script>
+
+</body>
+</html>
